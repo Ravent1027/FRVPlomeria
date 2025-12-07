@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard — FRV Plomería</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-logo">FRV</div>
+      <div class="brand-name">FRV Plomería</div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="dashboard.html" class="active">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="contenido">
+    <div class="container">
+      <h1>Solicitudes guardadas (local)</h1>
+      <table id="appointments" class="appointments-table">
+        <thead>
+          <tr><th>Nombre</th><th>Cédula</th><th>Dirección</th><th>Problema</th><th>Acciones</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p class="muted">Las solicitudes se guardan en el navegador (localStorage). Útil para pruebas.</p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
