@@ -14,9 +14,9 @@ obj/
 *.tmp
 *.temp
 
-# Publish
-publish/
-wwwroot/
+# Do NOT ignore frontend inside wwwroot
+!frv_api/wwwroot/
+!frv_api/wwwroot/frvplomeria/**
 
 # Rider / JetBrains
 .idea/

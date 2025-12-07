@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Dashboard — FRV Plomería</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <div class="brand-logo">FRV</div>
-      <div class="brand-name">FRV Plomería</div>
-    </div>
+    <div class="brand"><div class="brand-logo">FRV</div><div class="brand-name">FRV Plomería</div></div>
     <nav class="main-nav">
       <a href="index.html">Inicio</a>
       <a href="contacto.html">Contacto</a>
@@ -25,14 +20,28 @@
 
   <main class="contenido">
     <div class="container">
-      <h1>Solicitudes guardadas (local)</h1>
-      <table id="appointments" class="appointments-table">
-        <thead>
-          <tr><th>Nombre</th><th>Cédula</th><th>Dirección</th><th>Problema</th><th>Acciones</th></tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-      <p class="muted">Las solicitudes se guardan en el navegador (localStorage). Útil para pruebas.</p>
+      <h1>Panel de administración</h1>
+
+      <div id="loginBox" style="max-width:420px;margin-bottom:20px">
+        <h3>Iniciar sesión (admin)</h3>
+        <input id="adminUser" placeholder="Usuario" />
+        <input id="adminPass" placeholder="Contraseña" type="password" />
+        <button id="btnLogin" class="btn btn-primary">Ingresar</button>
+        <p id="loginMsg" style="color:#ffb3b3"></p>
+      </div>
+
+      <div id="adminArea" style="display:none">
+        <h2>Solicitudes</h2>
+        <label>Fecha: <input type="date" id="filterDate" /></label>
+        <button id="btnLoad" class="btn btn-ghost">Cargar</button>
+
+        <table id="appointments" class="appointments-table" style="width:100%;margin-top:12px">
+          <thead>
+            <tr><th>Nombre</th><th>Tel</th><th>Provincia</th><th>Direccion</th><th>Hora</th><th>Costo</th><th>Estado</th><th>Acciones</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     </div>
   </main>
 

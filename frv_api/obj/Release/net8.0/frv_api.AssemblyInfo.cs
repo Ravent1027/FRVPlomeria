@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("frv_api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a080884ef9e8e78b38f0740c6ec0057dbe0560d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+427056104cfe7c18fa5176b29468efc550471b3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("frv_api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("frv_api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

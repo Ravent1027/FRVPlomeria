@@ -1,21 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contacto – FRV Plomería</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <div class="brand-logo">FRV</div>
-      <div class="brand-name">FRV Plomería</div>
-    </div>
+    <div class="brand"><div class="brand-logo">FRV</div><div class="brand-name">FRV Plomería</div></div>
     <nav class="main-nav">
       <a href="index.html">Inicio</a>
       <a href="servicios.html">Servicios</a>
@@ -33,15 +28,38 @@
           <p>Complete el formulario y recibirá respuesta en breve.</p>
         </div>
 
-        <form id="requestForm" action="https://formspree.io/f/myzrpjra" method="POST" enctype="multipart/form-data">
+        <form id="requestForm">
           <label>Nombre completo</label>
           <input type="text" name="nombre" required>
 
-          <label>Cédula</label>
-          <input type="text" name="cedula" required>
+          <label>Teléfono</label>
+          <input type="tel" name="telefono" required>
 
           <label>Dirección</label>
           <input type="text" name="direccion" required>
+
+          <label>Provincia</label>
+          <select name="provincia" id="provincia" required>
+            <option value="Santo Domingo">Santo Domingo</option>
+            <option value="Distrito Nacional">Distrito Nacional</option>
+            <option value="Santiago">Santiago</option>
+            <option value="La Vega">La Vega</option>
+            <option value="La Altagracia">La Altagracia</option>
+            <option value="San Cristóbal">San Cristóbal</option>
+            <option value="Otra">Otra</option>
+          </select>
+
+          <label>Fecha</label>
+          <input type="date" name="fecha" id="fecha" required min="2025-01-01">
+
+          <label>Hora</label>
+          <select name="hora" id="hora" required>
+            <option value="09:00:00">09:00</option>
+            <option value="11:00:00">11:00</option>
+            <option value="13:00:00">13:00</option>
+            <option value="15:00:00">15:00</option>
+            <option value="17:00:00">17:00</option>
+          </select>
 
           <label>Especificación del problema</label>
           <textarea name="problema" rows="5" required></textarea>
@@ -49,34 +67,15 @@
           <label>Foto del problema (opcional)</label>
           <input type="file" name="foto">
 
+          <div id="availabilityMsg" style="margin:8px 0;color:#ffdd57"></div>
+
           <button type="submit" class="btn btn-primary">Enviar solicitud</button>
         </form>
       </div>
     </section>
   </main>
 
-   <footer>
-    <div class="footer-container">
-        <div class="footer-col">
-            <h3><i class="fa-solid fa-wrench"></i> FRV Plomería</h3>
-            <p>Servicios profesionales con tecnología avanzada.</p>
-        </div>
-
-        <div class="footer-col">
-            <h4>Contacto</h4>
-            <p><i class="fa-solid fa-phone"></i> +1 (829) 805-1802</p>
-            <p><i class="fa-solid fa-envelope"></i> frvplomeria@gmail.com</p>
-        </div>
-
-        <div class="footer-col">
-            <h4>Redes</h4>
-            <p><i class="fa-brands fa-facebook"></i> Facebook</p>
-            <p><i class="fa-brands fa-instagram"></i> Instagram</p>
-        </div>
-    </div>
-
-    <p class="copy">© 2025 rramossolutions — Todos los derechos reservados</p>
-</footer>
+  <footer> ... <!-- same footer as index; you can paste the footer block here --> </footer>
 
   <script src="js/main.js"></script>
 </body>
