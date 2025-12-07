@@ -3,7 +3,7 @@
 *.user
 *.suo
 
-# Build
+# Build output
 bin/
 obj/
 
@@ -14,11 +14,11 @@ obj/
 *.tmp
 *.temp
 
-# Do NOT ignore frontend inside wwwroot
+# Do NOT ignore the API's wwwroot folder (contains your frontend)
 !frv_api/wwwroot/
-!frv_api/wwwroot/frvplomeria/**
+!frv_api/wwwroot/**
 
-# Rider / JetBrains
+# JetBrains
 .idea/
 
 # Entity Framework
@@ -26,4 +26,6 @@ Migrations/
 
 # Node
 node_modules/
+
+# Ignore typical frontend build output (optional)
 dist/
